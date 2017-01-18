@@ -1,0 +1,20 @@
+<template>
+<a class="weui-btn{{mini===''|yesToBe(' weui-btn_mini')}} weui-btn_{{plain===''|yesToBe('plain-')}}{{type}}{{disabled===''&&plain!==''|yesToBe(' weui-btn_disabled')}}{{plain===''&&disabled===''|yesToBe(' weui-btn_plain-disabled')}}{{loading===''|yesToBe(' weui-btn_loading')}}">
+    <i san-if="loading===''" class="weui-loading"></i>
+    <slot><slot>
+</a>
+</template>
+
+<script>
+export default {
+    initData() {
+        return {
+            type: 'primary'
+        }
+    },
+
+    inited() {
+        console.log(this.data)
+    }
+}
+</script>

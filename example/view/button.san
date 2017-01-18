@@ -1,0 +1,54 @@
+<template>
+    <div class="page view">
+        <header>
+            <h1 class="title">Button</h1>
+            <p class="desc">按钮</p>
+        </header>
+        <div class="bd">
+            <san-button>primary</san-button>
+            <san-button loading>primary</san-button>
+            <san-button disabled>primary</san-button>
+            <san-button type="default">default</san-button>
+            <san-button type="default" loading>default</san-button>
+            <san-button type="default" disabled>default</san-button>
+            <san-button type="warn">warn</san-button>
+            <san-button type="warn" loading>warn</san-button>
+            <san-button type="warn" disabled>warn</san-button>
+            <div class="button-sp-area">
+                <san-button plain>primary</san-button>
+                <san-button plain disabled>primary</san-button>
+                <san-button plain type="default">default</san-button>
+                <san-button plain type="default" disabled>default</san-button>
+                <san-button mini>primary</san-button>
+                <san-button mini disabled>primary</san-button>
+                <san-button mini type="default">default</san-button>
+                <san-button mini type="default" disabled>default</san-button>
+                <san-button mini type="warn">warn</san-button>
+                <san-button mini type="warn" disabled>warn</san-button>
+            </div>
+
+        </div>
+    </div>
+</template>
+
+<script>
+import Button from 'src/components/button';
+
+export default {
+    components: {
+        'san-button': Button
+    }
+}
+</script>
+
+<style>
+.weui-btn {
+    margin-bottom: 15px;
+}
+
+.button-sp-area {
+    margin: 0 auto;
+    padding: 15px 0;
+    width: 60%;
+}
+</style>
