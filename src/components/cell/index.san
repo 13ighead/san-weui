@@ -1,0 +1,49 @@
+<template>
+<div class="weui-cell{{arrow?' weui-cell_access':''}}" on-click="onClick">
+    <div class="weui-cell__hd">
+        <slot name="icon"></slot>
+    </div>
+    <div class="weui-cell__bd">
+      <p>
+        {{title}}
+        <slot name="after-title"></slot>
+      </p>
+    </div>
+    <div class="weui-cell__ft">
+      <slot name="right"></slot>
+      <slot>{{value}}</slot>
+      <i class="weui-loading" san-if="isLoading"></i>
+    </div>
+</div>
+</template>
+
+<script>
+import {
+    router
+} from 'san-router'
+
+export default {
+    initData: function() {
+        return {
+            isLoading: false
+        }
+    },
+
+    onClick() {
+        let url = this.data.get('link');
+        if (typeof url === 'string') {
+            router.locator.redirect(url);
+        }
+    }
+}
+</script>
+
+<style lang='less'>
+.weui-cell {
+    .weui-btn {
+        margin-bottom: 0;
+        display: block;
+    }
+}
+
+</style>

@@ -1,0 +1,28 @@
+<template>
+    <div class="page view">
+        <header>
+            <h1 class="title">List</h1>
+            <p class="desc">列表</p>
+        </header>
+        <div class="bd">
+            <san-cell title="Button" link="/button"></san-cell>
+            <san-cell title="Cell" link="/cell"></san-cell>
+        </div>
+    </div>
+</template>
+
+<script>
+import Cell from 'src/components/cell';
+
+export default {
+    components: {
+        'san-cell': Cell
+    }
+}
+</script>
+
+<style>
+.weui-btn {
+    margin-bottom: 15px;
+}
+</style>

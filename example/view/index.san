@@ -1,0 +1,66 @@
+<template>
+    <div class="page view">
+        <header>
+            <h1 class="title">San</h1>
+            <p class="desc">San</p>
+        </header>
+        <div class="bd">
+
+        </div>
+    </div>
+</template>
+
+<script>
+
+import Cell from 'src/components/cell';
+
+export default {
+    components: {
+        'san-cell': Cell
+    }
+}
+</script>
+
+<style lang='less'>
+@logoHeight: 59px;
+@logoWidth: 465 / 750 * @logoHeight;
+
+header::before {
+    display: inline-block;
+    content: ' ';
+    width: @logoWidth;
+    height: @logoHeight;
+    background-image: url(../../src/img/logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 15px;
+    float: left;
+}
+</style>
+
+<style lang='less' scoped>
+.weui-btn {
+    margin-bottom: 15px;
+}
+
+
+@logoHeight: 59px;
+@logoWidth: 465 / 750 * @logoHeight;
+
+header::before {
+    display: inline-block;
+    content: ' ';
+    width: @logoWidth;
+    height: @logoHeight;
+    background-image: url(../../src/img/logo-colorful.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 15px;
+    float: left;
+}
+
+.logo-colorful {
+    width: 100px;
+    height: 100px;
+}
+</style>

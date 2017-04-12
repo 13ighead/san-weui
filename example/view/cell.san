@@ -1,0 +1,53 @@
+<template>
+    <div class="page view">
+        <header>
+            <h1 class="title">Cell</h1>
+            <p class="desc">单元</p>
+        </header>
+        <div class="bd">
+            <san-cell title="左侧文字"></san-cell>
+            <san-cell title="左侧文字">右侧文字</san-cell>
+            <san-cell title="左侧文字" arrow>右侧文字
+                <span class="san-ui-after-title" slot="after-title">带箭头不可跳转</span>
+            </san-cell>
+            <san-cell title="左侧文字" arrow link="/">右侧文字
+                <span class="san-ui-after-title" slot="after-title">带箭头可跳转</span>
+            </san-cell>
+            <san-cell title="左侧文字" arrow>右侧文字
+                <img slot="icon" class="san-ui-cell-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="">
+                <span class="san-ui-after-title" slot="after-title">带箭头不可跳转</span>
+            </san-cell>
+            <san-cell title="左侧文字" link="/">
+                <san-button mini slot="right">mini</san-button>
+                <img slot="icon" class="san-ui-cell-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="">
+                <span class="san-ui-after-title" slot="after-title">右侧带button</span>
+            </san-cell>
+        </div>
+    </div>
+</template>
+
+<script>
+import Cell from 'src/components/cell';
+import Button from 'src/components/button';
+
+export default {
+    components: {
+        'san-cell': Cell,
+        'san-button': Button
+    }
+}
+</script>
+
+<style>
+.san-ui-cell-icon {
+    width: 20px;
+    margin-right: 5px;
+    display: block;
+}
+
+.san-ui-after-title {
+    font-size: 0.9em;
+    color: #666;
+}
+
+</style>

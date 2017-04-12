@@ -5,7 +5,7 @@
             <p class="desc">按钮</p>
         </header>
         <div class="bd">
-            <san-button>primary</san-button>
+            <san-button on-click="onClick">primary</san-button>
             <san-button loading>primary</san-button>
             <san-button disabled>primary</san-button>
             <san-button type="default">default</san-button>
